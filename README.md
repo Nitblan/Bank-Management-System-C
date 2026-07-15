@@ -1,27 +1,47 @@
 # Bank Management System in C
 
-A modular banking management system developed in pure C.
+A modular bank management system written in pure C.
 
-This project was built as part of an introductory C programming course and focuses on applying core programming concepts through a console-based banking application.
-
-The implementation demonstrates modular software design, dynamic memory management, structures, pointers, input validation, and basic software testing.
+This project was developed as part of an introductory C programming course and demonstrates modular software design, dynamic memory management, pointers, structures, input validation, and basic software testing through a console-based banking application.
 
 ---
 
-## Features
+# Preview
+
+## Main Menu
+
+![Main Menu](assets/Image%201.png)
+
+---
+
+## Account Operations
+
+![Account Operations](assets/Image%202.png)
+
+---
+
+## Validation Driver
+
+The project includes a validation program that verifies the correctness of the core banking library.
+
+![Validation Driver](assets/Image%203.png)
+
+---
+
+# Features
 
 - Register an account holder
-- Deposit money into an account
+- Deposit money
 - Withdraw available balance
 - Change the account PIN
 - Display account information
 - Dynamic memory allocation for customer names
-- Modular architecture using header and source files
-- Validation driver for functional testing
+- Modular project architecture
+- Validation driver for automated testing
 
 ---
 
-## Concepts Demonstrated
+# Concepts Demonstrated
 
 - Structures (`struct`)
 - Pointers
@@ -35,10 +55,15 @@ The implementation demonstrates modular software design, dynamic memory manageme
 
 ---
 
-## Project Structure
+# Project Structure
 
-```
+```text
 Bank-Management-System-C/
+│
+├── assets/
+│   ├── Image 1.png
+│   ├── Image 2.png
+│   └── Image 3.png
 │
 ├── include/
 │   ├── banco.h
@@ -54,20 +79,21 @@ Bank-Management-System-C/
 ├── tests/
 │   └── driver_validacion.c
 │
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## Build
+# Build
 
-Compile the application with GCC:
+Compile using GCC.
 
 ```bash
 gcc src/*.c -Iinclude -o bank
 ```
 
-And just run the program:
+Run the application.
 
 ```bash
 ./bank
@@ -75,15 +101,15 @@ And just run the program:
 
 ---
 
-## Validation
+# Validation
 
-The repository includes a validation driver located in:
+The repository includes a validation program located in:
 
 ```text
 tests/driver_validacion.c
 ```
 
-The driver verifies several core functionalities, including:
+It verifies:
 
 - Account initialization
 - Dynamic memory allocation
@@ -92,15 +118,17 @@ The driver verifies several core functionalities, including:
 - PIN updates
 - Memory cleanup
 
+This makes it easier to verify that every core banking operation behaves as expected after future modifications.
+
 ---
 
-## Design
+# Software Design
 
-The project is divided into three main modules.
+The application is organized into independent modules.
 
-### Core Banking Logic
+## Banking Module
 
-Responsible for account management operations.
+Responsible for the business logic.
 
 - Account initialization
 - Deposits
@@ -108,59 +136,63 @@ Responsible for account management operations.
 - PIN management
 - Account information
 
-### User Interface
+## Utility Module
 
-Handles all interaction with the user.
+Responsible for user interaction.
 
 - Menus
-- Input
-- Output
 - Navigation
+- Input validation
+- Console formatting
 
-### Validation
+## Validation Module
 
-Provides a simple testing program to verify that the banking library behaves correctly.
+Contains a dedicated testing program used to validate the banking library independently from the user interface.
 
 ---
 
-## Learning Objectives
+# Learning Objectives
 
-This project was developed to practice fundamental C programming concepts, including:
+This project was developed to practice:
 
 - Modular software development
-- Working with pointers
+- Pointer manipulation
 - Manual memory management
-- Data abstraction using structures
+- Dynamic allocation
+- Data abstraction with structures
 - Function decomposition
-- Building maintainable console applications
+- Maintainable software architecture
 
 ---
 
-## Academic Note
+# Academic Note
 
-This repository contains my implementation of the banking system developed during an introductory C programming course.
+This project was completed as part of an introductory C programming course.
 
-Some starter files and interfaces were provided as part of the course assignment, including portions of the project skeleton and the validation driver used for testing.
+Some starter files and interfaces—including portions of the project skeleton and the validation driver—were provided as part of the course assignment.
 
-The banking logic, menu implementation, utility functions, dynamic memory management, and application behavior were implemented by me.
+The banking logic, menu system, utility functions, dynamic memory management, and overall application behavior were implemented by me.
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-Possible future enhancements include:
+Some possible future extensions include:
 
-- Persistent storage using files
-- Multiple bank accounts
+- File-based persistence
+- Support for multiple bank accounts
 - User authentication
 - Transaction history
 - Account creation and deletion
-- Better error handling
-- Makefile support
+- Improved input validation
+- Makefile
 - Unit testing framework
+- Cross-platform support
 
 ---
 
-## License
+# License
 
-This project is intended for educational purposes.
+Licensed under the MIT License.
+
+See the **LICENSE** file for more information.
